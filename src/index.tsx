@@ -1,12 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { StyledEngineProvider } from "@mui/material/styles";
-import Workspace from "./Workspace";
+import App from "./App";
+import "./index.css";
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <Workspace />
+      <App />
     </StyledEngineProvider>
   </React.StrictMode>
 );

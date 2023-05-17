@@ -40,5 +40,23 @@ export const theme = createTheme({
       800: "#303030",
       900: "#1f1f1f"
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width: 80,
+          height: 48,
+          background: "#3d5af1",
+          borderRadius: 60,
+          textTransform: "initial",
+          boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
+          fontStyle: "normal",
+          fontSize: 16,
+          fontWeight: 400,
+          lineHeight: 16
+        }
+      }
+    }
   }
 });

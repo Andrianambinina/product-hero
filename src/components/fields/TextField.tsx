@@ -1,4 +1,8 @@
-import { styled, TextField as MUITextField } from "@mui/material";
+import {
+  styled,
+  TextField as MUITextField,
+  TextFieldProps
+} from "@mui/material";
 
 const StyledTextField = styled(MUITextField)(({ theme }) => ({
   // "& .MuiInputLabel-root": {
@@ -41,14 +45,14 @@ const StyledTextField = styled(MUITextField)(({ theme }) => ({
   }
 }));
 
-const TextField = ({ label, placeholder }) => {
+// Need this later
+type Props = {
+  fullWidth?: boolean;
+} & TextFieldProps;
+
+const TextField = ({ fullWidth = true, ...inputProps }: Props) => {
   return (
-    <StyledTextField
-      id="outlined-basic"
-      label={label}
-      variant="outlined"
-      placeholder={placeholder}
-    />
+    <StyledTextField {...inputProps} variant="outlined" fullWidth={fullWidth} />
   );
 };
 

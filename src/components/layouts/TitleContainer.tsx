@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import getAlignment from "../../utils/alignement";
-import Description from "../Typography/Description";
-import Title from "../Typography/Title";
+import Description from "../typography/Description";
+import Title from "../typography/Title";
 
 type Props = {
   title: string;
