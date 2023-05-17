@@ -1,38 +1,42 @@
 import { styled, TextField as MUITextField } from "@mui/material";
 
 const StyledTextField = styled(MUITextField)(({ theme }) => ({
-  border: `1px solid ${theme.palette.grey[800]}`,
-  borderRadius: 6,
-  "& .MuiInputLabel-root": {
-    color: "#fff",
-    fontSize: 18
-  },
+  // "& .MuiInputLabel-root": {
+  // color: theme.palette.grey[300],
+  // fontSize: 18,
+  // },
   "& label.Mui-focused": {
-    color: "#fff"
+    // fontSize: 10,
+    fontWeight: 400,
+    color: theme.palette.grey[800]
   },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "none"
-  },
+  // "& .MuiInput-underline:after": {
+  //   borderBottomColor: "none"
+  // },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      border: "1px solid rgba(225, 225, 255, 0.27)",
-      fontSize: 15,
+      border: `1px solid ${theme.palette.grey[800]}`,
+      // fontSize: 15,
       borderRadius: 6,
       transition: "all 0.125s ease 0s"
     },
     "& .MuiOutlinedInput-input": {
-      color: "#fff",
+      color: "theme.palette.grey[800]",
       "&::placeholder": {
-        color: "yellow",
+        color: theme.palette.grey[300],
+        fontSize: 14,
         opacity: 1
       }
     },
-    "&:hover fieldset": {
-      border: "1px solid rgba(225, 225, 255, 0.4)",
-      backgroundColor: "rgba(185, 216, 233, 0.07)"
+    "& .MuiInputLabel-shrink": {
+      backgroundColor: "red"
     },
+    // "&:hover fieldset": {
+    //   border: `1px solid ${theme.palette.grey[300]}`,
+    //   backgroundColor: "none"
+    // },
     "&.Mui-focused fieldset": {
-      borderColor: theme.palette.primary.main
+      border: `1px solid ${theme.palette.grey[800]}`
     }
   }
 }));
